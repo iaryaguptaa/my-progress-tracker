@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#f8f7f4">
+    <meta name="description" content="Your personal space to track goals, habits, studies and daily progress.">
+
+    <title>My Progress | Personal Goal Tracker</title>
+
+    <!-- App installation settings -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Website design -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- App icon and browser settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+</head>
+
+<body>
+
+    <!-- Main application container -->
+    <div id="app">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-icon">✦</span>
+                <div>
+                    <h1>My Progress</h1>
+                    <p>Your journey, your growth.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main id="main-content">
+
+            <section id="dashboard">
+                <div class="welcome-section">
+                    <p class="eyebrow">YOUR PERSONAL SPACE</p>
+                    <h2>A little progress, every day.</h2>
+                    <p>Track your goals. Celebrate your growth.</p>
+                </div>
+
+                <!-- Date display -->
+                <section class="date-section">
+                    <h3 id="current-date">Loading date...</h3>
+                    <p>Make today count.</p>
+                </section>
+
+                <!-- Goals will appear here -->
+                <section id="goals-section">
+                    <div class="section-heading">
+                        <h2>My Goals</h2>
+                        <button id="add-goal-btn" type="button">
+                            + Add Goal
+                        </button>
+                    </div>
+
+                    <div id="goals-container">
+                        <p>Your goals will appear here.</p>
+                    </div>
+                </section>
+
+                <!-- Calendar -->
+                <section id="calendar-section">
+                    <h2>My Calendar</h2>
+                    <div id="calendar-container">
+                        Your calendar will appear here.
+                    </div>
+                </section>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Made for your growth. ♡</p>
+        </footer>
+
+    </div>
+
+    <!-- Application functionality -->
+    <script src="app.js"></script>
+
+</body>
+</html>

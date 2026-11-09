@@ -1,0 +1,346 @@
+
+/* =========================================
+   MY PROGRESS
+   ENCHANTED FAIRYTALE DESIGN
+========================================= */
+
+:root {
+    --background: #f5efff;
+    --surface: rgba(255, 255, 255, 0.88);
+    --lavender: #cdb8f3;
+    --purple: #8970b8;
+    --deep-purple: #665184;
+    --pink: #f5cde0;
+    --blue: #d8eaff;
+    --gold: #e8cc8b;
+    --text: #514668;
+    --muted: #968ca9;
+    --border: rgba(173, 151, 211, 0.22);
+    --shadow: 0 12px 35px rgba(117, 91, 158, 0.12);
+    --radius: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background:
+        radial-gradient(ellipse at 10% 10%,
+            #fff3fa 0%, transparent 35%),
+        radial-gradient(ellipse at 90% 20%,
+            #e2eaff 0%, transparent 38%),
+        radial-gradient(ellipse at 50% 90%,
+            #e9ddff 0%, transparent 40%),
+        linear-gradient(145deg,
+            #fbf3ff, #edf1ff, #fff1f7);
+    background-attachment: fixed;
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Magical background decoration */
+
+body::before {
+    content: "✧     ✦       ✧       ⋆      ✦";
+    position: fixed;
+    top: 7%;
+    left: 5%;
+    width: 90%;
+    color: rgba(177, 145, 215, 0.30);
+    font-size: 24px;
+    letter-spacing: 30px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Main container */
+
+#app {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+}
+
+/* Header */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    border-radius: 19px;
+    background: linear-gradient(135deg,
+        #e6d7ff, #f9d9ed);
+    color: var(--purple);
+    font-size: 29px;
+    box-shadow: 0 5px 18px rgba(157, 124, 205, 0.2);
+}
+
+.brand h1 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Welcome */
+
+.welcome-section {
+    padding: 55px 0 35px;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.welcome-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--deep-purple);
+    margin-bottom: 13px;
+}
+
+.welcome-section > p:last-child {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Date card */
+
+.date-section {
+    background: linear-gradient(120deg,
+        rgba(255,255,255,0.85),
+        rgba(232,219,255,0.85),
+        rgba(255,226,241,0.85));
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 28px;
+    padding: 28px;
+    margin-bottom: 38px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.date-section::after {
+    content: "✧";
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 65px;
+    color: rgba(180, 145, 207, 0.25);
+}
+
+.date-section h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--deep-purple);
+}
+
+.date-section p {
+    color: var(--purple);
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* Section headings */
+
+section {
+    margin-bottom: 34px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-size: 23px;
+    color: var(--deep-purple);
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#add-goal-btn {
+    background: linear-gradient(120deg,
+        #a88bda, #d59bc6);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(158, 119, 193, 0.23);
+}
+
+#add-goal-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(158, 119, 193, 0.3);
+}
+
+/* Goals */
+
+#goals-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#goals-container > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 32px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px dashed var(--lavender);
+    border-radius: var(--radius);
+}
+
+.goal-card {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.95);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.goal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 38px rgba(117,91,158,0.16);
+}
+
+/* Calendar */
+
+#calendar-section {
+    background: var(--surface);
+    padding: 27px;
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+#calendar-container {
+    color: var(--muted);
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+/* Footer */
+
+.app-footer {
+    text-align: center;
+    padding: 28px 10px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+/* Gentle motion */
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.brand-icon {
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    #app {
+        padding: 17px;
+    }
+
+    .welcome-section {
+        padding: 38px 0 28px;
+    }
+
+    .welcome-section h2 {
+        font-size: 32px;
+    }
+
+    #goals-container {
+        grid-template-columns: 1fr;
+    }
+
+    .date-section {
+        padding: 22px;
+    }
+
+    #calendar-section {
+        padding: 19px;
+    }
+
+    .section-heading {
+        align-items: center;
+    }
+
+    #add-goal-btn {
+        padding: 10px 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

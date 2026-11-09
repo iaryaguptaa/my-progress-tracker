@@ -1,0 +1,26 @@
+
+{
+    "id": "./",
+    "name": "My Progress - Enchanted Journey",
+    "short_name": "My Progress",
+    "description": "Your personal enchanted space to track goals, habits, studies and daily progress.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#f5efff",
+    "theme_color": "#f5efff",
+    "categories": [
+        "lifestyle",
+        "productivity",
+        "education"
+    ],
+    "icons": [
+        {
+            "src": "./icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
